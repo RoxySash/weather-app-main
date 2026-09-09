@@ -3,7 +3,9 @@
 /* ------------------- */
 
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -18,28 +20,42 @@ body {
   /* 4. Improve centering within parent */
   min-height: 100vh;
   font-size: var(--main-font-size);
-	
+  background-color: var(--neutral-900);
+  margin: 0 auto;
+  color: var(--neutral-0);
 }
 
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -51,23 +67,19 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-    --main-font-size: clamp(1rem, 2.5vw, 2rem); // 18px is equal to 1.13rem
-    --neutral-900: hsl(243, 96%, 9%);
---neutral-800: hsl(243, 27%, 20%);
---neutral-700: hsl(243, 23%, 24%);
---neutral-600: hsl(243, 23%, 30%);
---neutral-300: hsl(240, 6%, 70%);
---neutral-200: hsl(250, 6%, 84%);
---neutral-0: hsl(0, 0%, 100%);
+  --main-font-size: clamp(1rem, 2.5vw, 2rem); /* 18px is equal to 1.13rem*/
+  --neutral-900: hsl(243, 96%, 9%);
+  --neutral-800: hsl(243, 27%, 20%);
+  --neutral-700: hsl(243, 23%, 24%);
+  --neutral-600: hsl(243, 23%, 30%);
+  --neutral-300: hsl(240, 6%, 70%);
+  --neutral-200: hsl(250, 6%, 84%);
+  --neutral-0: hsl(0, 0%, 100%);
 
-### Orange
+  --orange-500: hsl(28, 100%, 52%);
 
-- **Orange 500**: hsl(28, 100%, 52%)
-
-### Blue
-
-- **Blue 500**: hsl(233, 67%, 56%)
-- **Blue 700**: hsl(248, 70%, 36%)
+  --blue-500: hsl(233, 67%, 56%);
+  --blue-700: hsl(248, 70%, 36%);
 }
 
 @font-face {
@@ -76,18 +88,58 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @font-face {
-    font-family: mainBoldFont;
-    src: url(./assets/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf);
+  font-family: mainBoldFont;
+  src: url(./assets/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf);
 }
 @font-face {
-    font-family: secondFont;
-    src: url(./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+  font-family: secondFont;
+  src: url(./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf);
 }
 
 @font-face {
-    font-family: thirdFont;
-    src: url(./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
+  font-family: thirdFont;
+  src: url(./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
 }
-p{
-    font-family: secondFont;
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unitSection {
+    background-color: var(--neutral-600);
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.unit-dropdown {
+    display: none;
+    width: 200px;
+    padding: 1rem;
+    z-index: 4;
+    transition: 0.5s;
+    border-radius: 5px;
+    background-color: var(--neutral-700);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 250px;
+    margin-top: 0.5rem;
+}
+
+.container {
+    position: relative;
+    margin: 1rem;
 }
