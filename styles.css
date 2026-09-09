@@ -82,6 +82,14 @@ h6 {
   --blue-700: hsl(248, 70%, 36%);
 }
 
+h1 {
+    font-family: mainFont;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 1rem;
+
+}
+
 @font-face {
   font-family: mainFont; /* set name */
   src: url(./assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf); /* url of the font */
@@ -143,3 +151,23 @@ h6 {
     position: relative;
     margin: 1rem;
 }
+
+.search-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+@media (min-width: 35rem) {
+    .search-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+}
+
