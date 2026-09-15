@@ -68,7 +68,7 @@ h6 {
 }
 
 :root {
-  --main-font-size: clamp(1rem, 2.5vw, 2rem); /* 18px is equal to 1.13rem*/
+  --main-font-size: clamp(1rem, 2.5vw, 1.5rem); /* 18px is equal to 1.13rem*/
   --neutral-900: hsl(243, 96%, 9%);
   --neutral-800: hsl(243, 27%, 20%);
   --neutral-700: hsl(243, 23%, 24%);
@@ -168,12 +168,14 @@ h1 {
   background-image: url('./assets/images/icon-search.svg');
   background-repeat: no-repeat;
   background-position: left;
-  
-  
+  background-position-x: 5%;
+ 
 }
 
 .city-input::placeholder {
   color: var(--neutral-0);
+   padding-left: 40px;
+  
 }
 .search-btn {
   border: none;
